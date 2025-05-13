@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmasi Üye Ol | Güzellik ve Kazanç Fırsatları | Ayşe Uçuk</title>
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <meta name="description"
+          content="Farmasi ile ücretsiz üye ol, kozmetik ve kişisel bakım ürünleri satışı yaparak kazanç sağla. Kariyer fırsatlarını keşfet ve liderlik pozisyonuna yüksel.">
+    <meta name="keywords" content="Farmasi, kozmetik, satış, ek gelir, liderlik, kariyer fırsatları, üyelik, güzellik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div>
+    <section class="header">
+        <h1> Ayşe Uçuk</h1>
+    </section>
+</div>
+
+<header>
+    <h2>ÜCRETSİZ ÜYE OL, FARMASİ'NİN BÜYÜLÜ DÜNYASINI KEŞFET!</h2>
+</header>
+
+
+<section class="uye-ol">
+    <% if (formstatus) { %>
+        <div class="form-message success">
+            <span class="icon">✔</span>
+            <p>Talebiniz başarıyla alındı.</p>
+        </div>
+    <% } else if (formstatus == false) { %>
+        <div class="form-message error">
+            <span class="icon">⚠</span>
+            <p>Talebinizde bir sorun oluştu.</p>
+        </div>
+    <% } %>
+
+    <div>
+        <form id="iletisim-form" action="/" method="POST">
+            <label for="name">Adınız ve Soyadınızı Giriniz</label>
+            <input type="text" id="name" name="name" required>
+
+            <!--            <label for="phone">Telefon Numaranız(Zorunlu)</label>-->
+            <!--            <input type="tel" id="phone" name="phone" required>-->
+            <label for="phone">Telefon Numaranız (Zorunlu)</label>
+            <input type="tel" id="phone" name="phone" required
+                   pattern="^05\d{9}$"
+                   title="Geçerli bir Türk telefon numarası girin. Örn: 05XXXXXXXXX">
+
+            <label for="reason">İletişim Nedeninizi Belirtin</label>
+            <select id="reason" name="reason" required>
+                <option value="Ürünleri İndirimli Almak">Ürünleri İndirimli Almak</option>
+                <option value="Ek Gelir Elde Etmek">Ek Gelir Elde Etmek</option>
+                <option value="Hesabım Askıda">Hesabım Askıda</option>
+                <option value="Ayşe Uçuk ile İletişim Kurmak">Ayşe Uçuk ile İletişim Kurmak</option>
+            </select>
+
+            <!--            <div style="margin-top: 20px; font-size: 13px; color: #555;">-->
+            <!--                Bu formu doldurarak-->
+            <!--                <a href="/kvkk" target="_blank" style="text-decoration: underline; color: #007bff;">KVKK Aydınlatma-->
+            <!--                    Metni</a>'ni-->
+            <!--                okuduğunuzu ve kabul ettiğinizi beyan etmiş olursunuz.-->
+            <!--            </div>-->
+            <!--            <button type="submit">Gönder</button>-->
+
+            <form id="kvkkForm">
+                <label>
+                    <input type="checkbox" id="kvkkCheckbox"/>
+                    <span>
+      <a href="/kvkk" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
+    </span>
+                </label>
+
+                <button type="submit" id="submitButton" disabled>Gönder</button>
+            </form>
+        </form>
+    </div>
+</section>
+
+
+<section class="aciklama-baslik">
+    <h2>Farmasi Kariyer Fırsatlarıyla Geleceğinizi Şekillendirin!</h2>
+</section>
+
+<section class="aciklamalar">
+    <div>
+        <p class="image-text">
+
+            Farmasi ile Güzellikten Daha Fazlası!
+            Farmasi, kozmetik ve kişisel bakım alanında yüksek kaliteli ürünleri, doğrudan satış sistemiyle tüketicilere
+            ulaştıran güçlü bir markadır. Kendi işinin patronu olmak, ek gelir kazanmak veya kariyerine yön vermek
+            isteyenler için Farmasi eşsiz bir fırsat sunar. Bizimle birlikte güzellik yolculuğuna adım at, başarıya
+            birlikte yürüyelim!
+
+        </p>
+    </div>
+
+    <div>
+
+        <h2 class="header">Hakkımızda</h2>
+
+        <p class="image-text">
+
+            Biz Kimiz?
+            Farmasi ekibimiz, girişimci kadın ve erkeklerden oluşan güçlü bir topluluktur. Amacımız; hem kaliteli
+            ürünlerle hayatlara dokunmak hem de kendi işini kurmak isteyenlere destek olmaktır. Liderlik, dayanışma ve
+            kazanç odaklı sistemimizle her bireyin potansiyelini ortaya çıkarmasına yardımcı oluyoruz.
+        </p>
+    </div>
+
+    <div>
+
+        <h2 class="header">Farmasi ile Kazanç</h2>
+
+        <p>Neden Farmasi ile Çalışmalısın?</p>
+
+        <p>%30’a varan kâr marjıyla satış geliri</p>
+
+        <p> Aktif ekip kurarak %7-%25 arasında prim geliri</p>
+
+        <p> Kariyer seviyelerine göre araç, seyahat ve liderlik bonusları</p>
+
+        <p>Ücretsiz üyelik, stok zorunluluğu yok</p>
+
+        <p> Kazanç modeli hem yeni başlayanlar hem de liderlik hedefleyenler için uygundur.</p>
+    </div>
+
+    <div>
+        <h2 class="header">
+            Ekip Kurma ve Liderlik
+        </h2>
+
+        <p>
+            Liderliğe Giden Yol Buradan Geçiyor
+            Farmasi’de sadece satış yaparak değil, ekip kurarak da gelir elde edersin. Kendi danışmanlarını sisteme
+            dahil ederek büyüyebilir, kariyer basamaklarını tırmanabilirsin. Ekibine destek olur, eğitim verir, birlikte
+            hedef koyarsın. Sen büyüdükçe kazancın da artar.
+        </p>
+    </div>
+
+    <div class="kazanc-image-div">
+        <img class="image"
+             src="./images/kazanc-sistemi.jpg"
+             alt="Farmasi Kazanç Sistemi">
+
+        <p class="image-text">
+            Sen de Farmasi Ailesine Katıl!
+            Hemen ücretsiz üye ol, kendi işini kur, güzelliği kazanca dönüştür!
+
+        </p>
+    </div>
+</section>
+
+<section class="redirect">
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="#iletisim-form">
+            <button style="padding: 10px 20px; font-size: 16px;">Hemen Bize Katılın!</button>
+        </a>
+    </div>
+</section>
+
+<script>
+    const checkbox = document.getElementById('kvkkCheckbox');
+    const button = document.getElementById('submitButton');
+
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            button.disabled = false;
+            button.classList.add('enabled');
+        } else {
+            button.disabled = true;
+            button.classList.remove('enabled');
+        }
+    });
+
+    document.getElementById('kvkkForm').addEventListener('submit', function (e) {
+        if (!checkbox.checked) {
+            e.preventDefault();
+            alert('Lütfen KVKK metnini kabul ettiğinizi onaylayın.');
+        }
+    });
+</script>
+</body>
+
+
+</html>

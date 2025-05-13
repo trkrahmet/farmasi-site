@@ -1,0 +1,411 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Updated CSS Variables for Soft Pink Theme */
+:root {
+    --primary-color: #f78fb3; /* Soft pink */
+    --secondary-color: #ffe6f0; /* Light pink background */
+    --background-color: #fff5f8; /* Very light pink */
+    --text-color: #5a5a5a; /* Neutral gray for text */
+    --font-family: 'Roboto', sans-serif;
+    --transition-duration: 0.3s;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #fbc2cf 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Styling Form Submit Messages */
+.form-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    animation: fadeInSlide 0.5s ease-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-message .icon {
+    font-size: 20px;
+}
+
+.form-message.success {
+    background: linear-gradient(90deg, #d4edda, #a3d9b1);
+    color: #155724;
+    border-left: 6px solid #28a745;
+}
+
+.form-message.error {
+    background: linear-gradient(90deg, #f8d7da, #f2a7ac);
+    color: #721c24;
+    border-left: 6px solid #dc3545;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Styling for the topmost text */
+h1, h2 {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif; /* Applied a modern font */
+    font-size: 3rem; /* Increased font size for better visibility */
+    font-weight: bold; /* Made the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added a subtle shadow for better contrast */
+    text-align: center; /* Centered the text */
+    margin: 20px 0; /* Added spacing */
+}
+
+h1::after, h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+/* Section Styling */
+section {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+    max-width: 60%;
+    padding: 30px 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Button Styling */
+button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--background-color);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 24px;
+    transition: all var(--transition-duration);
+    box-shadow: var(--box-shadow);
+}
+
+button:hover {
+    background-color: #e07a9e; /* Slightly darker pink */
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form Styling */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-color: #f5a4b8; /* Light pink border */
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 12px;
+    transition: border-color var(--transition-duration), box-shadow var(--transition-duration);
+    background-color: #fff;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(247, 143, 179, 0.2);
+    outline: none;
+}
+
+.kazanc-image-div {
+    text-align: center;
+}
+
+/* Image Styling */
+img {
+    width: 60%;
+    max-height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-duration);
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Baslik Styling */
+.baslik {
+    background-color: #fff1f2;
+    border-left: 6px solid #d63447;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Accordion Styling */
+.detaylar .plus {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #d63447;
+}
+
+.detaylar div {
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: box-shadow var(--transition-duration), background-color var(--transition-duration);
+}
+
+.detaylar div:hover {
+    background-color: #ffe6f0; /* Light pink hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detaylar .first-accordion-content,
+.detaylar .second-accordion-content,
+.detaylar .third-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #fff8f8;
+    padding: 0 15px;
+    border-left: 3px solid #d63447;
+}
+
+/* Active class for opening */
+.accordion-open {
+    max-height: 500px;
+    padding: 15px;
+    animation: accordionSlide 0.4s ease-in-out forwards;
+}
+
+/* Kvkk return home button */
+.btn-home {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f78fb3; /* Pembe ton */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-home:hover {
+    background-color: #0056b3; /* Daha koyu mavi */
+    transform: scale(1.05);
+}
+
+.btn-home:active {
+    transform: scale(0.98);
+}
+
+
+/* Kvkk button */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff0f6;
+    color: #555;
+}
+
+form {
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: #ffe4ec;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+    transition: all 0.5s ease;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+input[type="checkbox"] {
+    accent-color: #ff69b4;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #d63384;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #b0276e;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+button.enabled {
+    cursor: pointer;
+    opacity: 1;
+    background-color: #e754a5;
+}
+
+button.enabled:hover {
+    background-color: #d24396;
+}
+
+
+@keyframes accordionSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for paragraph text */
+p {
+    font-size: 1.2rem; /* Increased font size */
+    font-family: 'Roboto', sans-serif; /* Applied a modern and clean font */
+    line-height: 1.8; /* Improved readability */
+    color: var(--text-color); /* Ensured consistent text color */
+    margin-bottom: 20px; /* Added spacing between paragraphs */
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .header, .baslik, .uye-ol, .aciklamalar {
+        padding: 20px 15px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+    }
+
+    img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        transition: transform var(--transition-duration);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .header, .baslik, .uye-ol, .aciklamalar {
+        padding: 20px 15px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+    }
+
+    img {
+        width: 90%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        transition: transform var(--transition-duration);
+    }
+}
+

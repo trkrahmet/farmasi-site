@@ -4,6 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "trace-deprecation": "node --trace-deprecation index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

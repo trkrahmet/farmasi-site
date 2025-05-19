@@ -4,10 +4,15 @@ html {
 
 /* Updated CSS Variables for Soft Pink Theme */
 :root {
-    --primary-color: #f78fb3; /* Soft pink */
-    --secondary-color: #ffe6f0; /* Light pink background */
-    --background-color: #fff5f8; /* Very light pink */
-    --text-color: #5a5a5a; /* Neutral gray for text */
+    --primary-color: #282323;
+    /* Soft pink */
+    --general-color: #f78fb3;
+    --secondary-color: #ffe6f0;
+    /* Light pink background */
+    --background-color: #fff5f8;
+    /* Very light pink */
+    --text-color: #5a5a5a;
+    /* Neutral gray for text */
     --font-family: 'Roboto', sans-serif;
     --transition-duration: 0.3s;
     --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -30,9 +35,15 @@ body {
     padding: 0;
 }
 
+a.home-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-duration);
+}
+
 /* Header Styling */
 .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #fbc2cf 100%);
+    background: linear-gradient(135deg, var(--general-color) 0%, #fbc2cf 100%);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -77,6 +88,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -85,17 +97,25 @@ body {
 
 
 /* Styling for the topmost text */
-h1, h2 {
+h1,
+h2 {
     color: var(--primary-color);
-    font-family: 'Roboto', sans-serif; /* Applied a modern font */
-    font-size: 3rem; /* Increased font size for better visibility */
-    font-weight: bold; /* Made the text bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added a subtle shadow for better contrast */
-    text-align: center; /* Centered the text */
-    margin: 20px 0; /* Added spacing */
+    font-family: 'Roboto', sans-serif;
+    /* Applied a modern font */
+    font-size: 3rem;
+    /* Increased font size for better visibility */
+    font-weight: bold;
+    /* Made the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Added a subtle shadow for better contrast */
+    text-align: center;
+    /* Centered the text */
+    margin: 20px 0;
+    /* Added spacing */
 }
 
-h1::after, h2::after {
+h1::after,
+h2::after {
     content: "";
     display: block;
     width: 60px;
@@ -129,7 +149,8 @@ button {
 }
 
 button:hover {
-    background-color: #e07a9e; /* Slightly darker pink */
+    background-color: #e07a9e;
+    /* Slightly darker pink */
     transform: scale(1.05);
 }
 
@@ -138,6 +159,7 @@ button:hover {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -148,6 +170,7 @@ button:hover {
         transform: translateY(-20px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -161,9 +184,11 @@ label {
     font-weight: bold;
 }
 
-input, select {
+input,
+select {
     border: 1px solid #ccc;
-    border-color: #f5a4b8; /* Light pink border */
+    border-color: #f5a4b8;
+    /* Light pink border */
     border-radius: 8px;
     font-size: 16px;
     margin-bottom: 20px;
@@ -173,8 +198,9 @@ input, select {
     background-color: #fff;
 }
 
-input:focus, select:focus {
-    border-color: var(--primary-color);
+input:focus,
+select:focus {
+    border-color: var(--general-color);
     box-shadow: 0 0 0 3px rgba(247, 143, 179, 0.2);
     outline: none;
 }
@@ -224,7 +250,8 @@ img:hover {
 }
 
 .detaylar div:hover {
-    background-color: #ffe6f0; /* Light pink hover */
+    background-color: #ffe6f0;
+    /* Light pink hover */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -250,7 +277,8 @@ img:hover {
 .btn-home {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #f78fb3; /* Pembe ton */
+    background-color: #f78fb3;
+    /* Pembe ton */
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -261,7 +289,8 @@ img:hover {
 }
 
 .btn-home:hover {
-    background-color: #0056b3; /* Daha koyu mavi */
+    background-color: #0056b3;
+    /* Daha koyu mavi */
     transform: scale(1.05);
 }
 
@@ -331,6 +360,18 @@ button {
     transition: all 0.5s ease;
 }
 
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
 button.enabled {
     cursor: pointer;
     opacity: 1;
@@ -347,6 +388,7 @@ button.enabled:hover {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -355,24 +397,36 @@ button.enabled:hover {
 
 /* Styling for paragraph text */
 p {
-    font-size: 1.2rem; /* Increased font size */
-    font-family: 'Roboto', sans-serif; /* Applied a modern and clean font */
-    line-height: 1.8; /* Improved readability */
-    color: var(--text-color); /* Ensured consistent text color */
-    margin-bottom: 20px; /* Added spacing between paragraphs */
+    font-size: 1.2rem;
+    /* Increased font size */
+    font-family: 'Roboto', sans-serif;
+    /* Applied a modern and clean font */
+    line-height: 1.8;
+    /* Improved readability */
+    color: var(--text-color);
+    /* Ensured consistent text color */
+    margin-bottom: 20px;
+    /* Added spacing between paragraphs */
 }
 
 /* Mobil uyumluluk */
 @media (max-width: 768px) {
-    .header, .baslik, .uye-ol, .aciklamalar {
+
+    .header,
+    .baslik,
+    .uye-ol,
+    .aciklamalar {
         padding: 20px 15px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 24px;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
         font-size: 16px;
     }
 
@@ -387,15 +441,22 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-    .header, .baslik, .uye-ol, .aciklamalar {
+
+    .header,
+    .baslik,
+    .uye-ol,
+    .aciklamalar {
         padding: 20px 15px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 24px;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
         font-size: 16px;
     }
 
@@ -408,4 +469,3 @@ p {
         transition: transform var(--transition-duration);
     }
 }
-

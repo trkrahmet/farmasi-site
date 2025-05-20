@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.white-text {
+    color: whitesmoke;
+}
+
 /* Updated CSS Variables for Soft Pink Theme */
 :root {
     --primary-color: #282323;
